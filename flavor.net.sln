@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A532E299-50CA-43E2-A506-FD0BDF599628}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{196D6B7E-EC45-4B16-B509-C3AF1878F71D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "flavor.net", "src\flavor.net\flavor.net.xproj", "{4DCA4297-9BE0-4CE9-B1AF-23483291112D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DCA4297-9BE0-4CE9-B1AF-23483291112D} = {A532E299-50CA-43E2-A506-FD0BDF599628}
+	EndGlobalSection
+EndGlobal

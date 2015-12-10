@@ -1,0 +1,39 @@
+{
+  "locked": false,
+  "version": 1,
+  "targets": {
+    ".NETPortable,Version=v4.5,Profile=Profile259": {
+      "Be.IO/1.0.0": {
+        "compile": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Be.IO.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Be.IO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Be.IO/1.0.0": {
+      "sha512": "nx7w90Z+icF9GAw3pgY27mpGo+EjV0elw8bZr8sd/WghF1nSU8na/RmtvXXD5yTNv/odCnOwEhfNDisyqjpDrA==",
+      "files": [
+        "Be.IO.1.0.0.nupkg",
+        "Be.IO.1.0.0.nupkg.sha512",
+        "Be.IO.nuspec",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Be.IO.dll",
+        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+Xamarin.iOS10+MonoTouch10/Be.IO.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [
+      "Be.IO >= 1.0.0"
+    ],
+    ".NETPortable,Version=v4.5,Profile=Profile259": [
+      "fx/System.Collections ",
+      "fx/System.IO ",
+      "fx/System.Linq ",
+      "fx/System.Runtime "
+    ]
+  }
+}
