@@ -23,7 +23,10 @@ namespace Flavor
                 BaseStream.Dispose();
         }
 
-        public void Write(IBinarySerializable obj) =>
+        public void Write<T>(T obj)
+            where T : IBinarySerializable
+        {
             obj.CopyTo(BaseStream);
+        }
     }
 }

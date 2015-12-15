@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Flavor
+namespace Flavor.Helpers
 {
-    public static class BeBinaryReaderExtensions
+    internal static class BeBinaryReaderExtensions
     {
         public static int ReadInt24(this BeBinaryReader reader)
         {

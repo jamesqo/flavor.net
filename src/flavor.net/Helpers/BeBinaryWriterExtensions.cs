@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Flavor
+namespace Flavor.Helpers
 {
-    public static class BeBinaryWriterExtensions
+    internal static class BeBinaryWriterExtensions
     {
         public static void WriteInt24(this BeBinaryWriter writer, int value)
         {

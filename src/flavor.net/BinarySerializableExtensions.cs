@@ -7,7 +7,8 @@ namespace Flavor
 {
     public static class BinarySerializableExtensions
     {
-        public static byte[] ToByteArray(this IBinarySerializable obj)
+        public static byte[] ToByteArray<T>(this T obj)
+            where T : IBinarySerializable // avoid boxing for structs
         {
             var bytes = new byte[obj.Size];
             var m = new MemoryStream(bytes);

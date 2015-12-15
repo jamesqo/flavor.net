@@ -1,4 +1,5 @@
 ﻿using Be.IO;
+using Flavor.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,6 +34,7 @@ namespace Flavor
             writer.WriteInt24(lo);
             writer.Write(hi);
 
+            writer.WriteInt24(StreamId);
             Data.CopyTo(stream);
         }
     }
