@@ -24,7 +24,7 @@ namespace Flavor
         public static implicit operator PacketType(byte value)
             => new PacketType(value);
 
-        public static explicit operator byte(PacketType type)
+        public static implicit operator byte(PacketType type)
             => type.AsByte;
     }
 }

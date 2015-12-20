@@ -11,6 +11,11 @@ namespace Flavor
         public const int HeaderSize = 11;
         public const int StreamId = 0;
 
+        public FlvPacket(PacketData data)
+        {
+            this.Data = data;
+        }
+
         public PacketType Type { get; set; }
         public int TimeStamp { get; set; }
         public PacketData Data { get; }

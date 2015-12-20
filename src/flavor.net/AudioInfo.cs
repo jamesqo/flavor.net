@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flavor.Helpers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace Flavor
                     case 3:
                         return 44d;
                     default:
-                        throw new NotImplementedException("This shouldn't be possible.");
+                        throw Error.NotImplemented("This shouldn't be possible.");
                 }
             }
         }

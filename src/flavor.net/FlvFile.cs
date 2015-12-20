@@ -1,4 +1,5 @@
 ﻿using Be.IO;
+using Flavor.Helpers;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +9,12 @@ namespace Flavor
 {
     public class FlvFile : IBinarySerializable
     {
+        public FlvFile(FlvHeader header, IEnumerable<FlvPacket> packets)
+        {
+            this.Header = header;
+            this.Packets = packets.AsList();
+        }
+
         public FlvHeader Header { get; }
         public List<FlvPacket> Packets { get; }
 
@@ -17,7 +24,7 @@ namespace Flavor
             {
                 int header = FlvHeader.Size;
                 int packets = Packets.Sum(p => p.Size);
-                int sizes = 4 * (Packets.Count + 1);
+                int sizes = 4 * Packets.Count + 4;
                 return header + packets + sizes;
             }
         }
