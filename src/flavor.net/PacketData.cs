@@ -5,16 +5,8 @@ using System.Linq;
 
 namespace Flavor
 {
-    public abstract class PacketData : IPacketInfo, IBinarySerializable
+    public abstract class PacketData : IBinarySerializable
     {
-        private readonly FlvPacket parent;
-
-        public PacketContent Content =>
-            parent.Type.Content;
-
-        public bool IsEncrypted =>
-            parent.Type.IsEncrypted;
-
         public abstract int Size { get; }
 
         public abstract void CopyTo(Stream stream);

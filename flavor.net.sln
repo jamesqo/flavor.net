@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A532E299-50CA-43E2-A506-FD0BDF599628}"
 EndProject
@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "flavor.net", "src\flavor.net\flavor.net.xproj", "{4DCA4297-9BE0-4CE9-B1AF-23483291112D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EB47DCC4-6C2B-45A4-9E40-987724417F32}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "flavor.net.tests", "tests\flavor.net.tests\flavor.net.tests.xproj", "{D24EDCB8-4BED-46B0-8748-04E5D352B454}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,11 +26,16 @@ Global
 		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCA4297-9BE0-4CE9-B1AF-23483291112D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24EDCB8-4BED-46B0-8748-04E5D352B454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24EDCB8-4BED-46B0-8748-04E5D352B454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24EDCB8-4BED-46B0-8748-04E5D352B454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24EDCB8-4BED-46B0-8748-04E5D352B454}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4DCA4297-9BE0-4CE9-B1AF-23483291112D} = {A532E299-50CA-43E2-A506-FD0BDF599628}
+		{D24EDCB8-4BED-46B0-8748-04E5D352B454} = {EB47DCC4-6C2B-45A4-9E40-987724417F32}
 	EndGlobalSection
 EndGlobal

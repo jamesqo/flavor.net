@@ -34,11 +34,16 @@ namespace Flavor
             var length = s.Length; // cache the length
             var packets = new List<FlvPacket>();
 
-            while (s.Position + 4 >= length)
+            if (s.Position + 4 <= length)
             {
-                s.Seek(4, SeekOrigin.Current); // skip the size of the previous packet
-                packets.Add(ReadPacket());
+                s.Seek(4, SeekOrigin.Current); // the first packet size is always 0
+                while (s.Position + 4 <= length)
+                {
+                    packets.Add(ReadPacket());
+                    s.Seek(4, SeekOrigin.Current); // skip the size of the previous packet
+                }
             }
+            s.Seek(0, SeekOrigin.End); // skip to the end of the stream
 
             return new FlvFile(header, packets);
         }
@@ -50,7 +55,7 @@ namespace Flavor
             if (read != 0x464C5601) // "FLV" and a version number of 1
             {
                 if (read == 0x66747970) // "ftyp"
-                    throw Error.InvalidData("This is an MP3 file, not an FLV file!");
+                    throw Error.InvalidData("This is an MP4 file, not an FLV file!");
                 throw Error.InvalidData("This is not an FLV file!");
             }
 
