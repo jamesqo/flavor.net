@@ -9,6 +9,13 @@
 		"test": "xunit.runner.dnx"
 	},
 	"frameworks": {
-		"dnx46": { }
+		"dnx46": {
+			"frameworkAssemblies": {
+				"System.Collections": "4.0.10.0",
+				"System.IO": "4.0.0.0",
+				"System.Linq": "4.0.0.0",
+				"System.Runtime": "4.0.20.0"
+			}
+		}
 	}
 }

@@ -16,8 +16,9 @@ namespace Flavor
         public void CopyTo(Stream stream)
         {
             var writer = new BeBinaryWriter(stream);
-            writer.Write(Signature);
-            writer.Write(Version);
+            foreach (char c in Signature)
+                writer.Write((byte)c);
+            writer.Write((byte)Version);
             writer.Write((byte)Flags);
             writer.Write(Size);
         }
