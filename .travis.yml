@@ -1,6 +1,6 @@
 language: csharp
 install:
-  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | sh
+  - curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | bash
   - source ~/.dnx/dnvm/dnvm.sh
   - dnvm upgrade
 script:
