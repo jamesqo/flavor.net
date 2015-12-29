@@ -1,0 +1,7 @@
+language: csharp
+install:
+  - ./build.sh
+mono:
+  - nightly
+notifications:
+  email: false
