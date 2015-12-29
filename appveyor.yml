@@ -1,0 +1,2 @@
+install:
+  - ps: ./build.ps1
