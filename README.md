@@ -10,6 +10,8 @@ Flavor is an intuitive library to parse and manipulate FLV files from .NET.
 
 # Installation
 
+Run this from the Package Manager Console:
+
 ```powershell
 Install-Package flavor.net
 ```
