@@ -1,10 +1,18 @@
 var target = Argument("target", "Default");
 var config = Argument("configuration", "Release");
 
-Task("Build")
+Task("Restore")
     .Does(() =>
 {
-    DNURestore();
+    var files = GetFiles("**/project.json");
+    foreach (var file in files)
+        DNURestore(file);
+});
+
+Task("Build")
+    .IsDependentOn("Restore")
+    .Does(() =>
+{
     MSBuild("flavor.net.sln", new MSBuildSettings()
         .SetConfiguration(config));
 });
@@ -12,7 +20,8 @@ Task("Build")
 Task("Test")
     .Does(() =>
 {
-    var pattern = string.Format("artifacts/bin/flavor.net.tests/{0}/**/flavor.net.tests.dll", config);
+    var format = "artifacts/bin/flavor.net.tests/{0}/**/flavor.net.tests.dll";
+    var pattern = string.Format(format, config);
     XUnit2(GetFiles(pattern));
 });
 
@@ -24,7 +33,8 @@ Task("Publish")
     .IsDependentOn("Default")
     .Does(() =>
 {
-    var pattern = string.Format("artifacts/bin/flavor.net/{0}/flavor.net.*.nupkg", config);
+    var format = "artifacts/bin/flavor.net/{0}/flavor.net.*.nupkg";
+    var pattern = string.Format(format, config);
     var package = GetFiles(pattern)
         .Select(f => f.FullPath)
         .Single(p => !p.EndsWith("symbols.nupkg"));
