@@ -1,13 +1,24 @@
 var target = Argument("target", "Default");
 var config = Argument("configuration", "Release");
 
-Task("Default")
+Task("Build")
     .Does(() =>
 {
     DNURestore();
     MSBuild("flavor.net.sln", new MSBuildSettings()
         .SetConfiguration(config));
 });
+
+Task("Test")
+    .Does(() =>
+{
+    var pattern = string.Format("artifacts/bin/flavor.net.tests/{0}/**/flavor.net.tests.dll", config);
+    XUnit2(GetFiles(pattern));
+});
+
+Task("Default")
+    .IsDependentOn("Build")
+    .IsDependentOn("Test");
 
 Task("Publish")
     .IsDependentOn("Default")
