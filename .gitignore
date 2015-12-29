@@ -230,8 +230,5 @@ _Pvt_Extensions
 # FAKE - F# Make
 .fake/
 
-# NuGet.exe
-tools/nuget.exe
-
 # Cake Build
-tools/Cake/
+tools/
