@@ -1,6 +1,6 @@
 language: csharp
 install:
-  - ./build.sh
+  - bash build.sh
 mono:
   - nightly
 notifications:
