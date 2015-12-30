@@ -6,8 +6,6 @@
 
 Flavor is an intuitive library to parse and manipulate FLV files from .NET.
 
-# Features
-
 # Installation
 
 Run this from the Package Manager Console:
@@ -17,6 +15,27 @@ Install-Package flavor.net
 ```
 
 # Getting Started
+
+Here's a small sample to help you get started with Flavor:
+
+```csharp
+using Flavor;
+
+FlvFile file;
+using (var input = File.OpenRead("foo.flv"))
+    file = Flv.Parse(input);
+
+foreach (var packet in file.Packets)
+{
+    Console.WriteLine($"{packet.Type.Content} packet encountered!");
+    Console.WriteLine($"It is {packet.Size} bytes long...");
+    Console.WriteLine("Here's the raw binary data:");
+    Console.WriteLine(string.Join(" ", packet.Data.ToByteArray()));
+}
+
+using (var output = File.OpenWrite("bar.flv"))
+    file.CopyTo(output);
+```
 
 # Building the Repo
 

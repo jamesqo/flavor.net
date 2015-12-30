@@ -1,6 +1,8 @@
 var target = Argument("target", "Default");
 var config = Argument("configuration", "Release");
 
+// TODO: Task("Upgrade").Does(() => DNVMUpgrade()) when support for dnvm is added.
+
 Task("Restore")
     .Does(() =>
 {
@@ -20,6 +22,7 @@ Task("Build")
 Task("Test")
     .Does(() =>
 {
+    // TODO: Replace with DNX("test") once support for dnx is added.
     var format = "artifacts/bin/flavor.net.tests/{0}/**/flavor.net.tests.dll";
     var pattern = string.Format(format, config);
     XUnit2(GetFiles(pattern));
