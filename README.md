@@ -27,7 +27,7 @@ using (var input = File.OpenRead("foo.flv"))
 
 foreach (var packet in file.Packets)
 {
-    Console.WriteLine($"{packet.Type.Content} packet encountered!");
+    Console.WriteLine($"{packet.Type} packet encountered!");
     Console.WriteLine($"It is {packet.Size} bytes long...");
     Console.WriteLine("Here's the raw binary data:");
     Console.WriteLine(string.Join(" ", packet.Data.ToByteArray()));
