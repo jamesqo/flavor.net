@@ -36,5 +36,8 @@ namespace Flavor
 
         public void CopyTo(Stream stream) =>
             stream.WriteByte(AsByte);
+
+        public override string ToString() =>
+            Content.ToString();
     }
 }
