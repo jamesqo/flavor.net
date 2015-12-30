@@ -30,7 +30,7 @@ foreach (var packet in file.Packets)
     Console.WriteLine($"{packet.Type.Content} packet encountered!");
     Console.WriteLine($"It is {packet.Size} bytes long...");
     Console.WriteLine("Here's the raw binary data:");
-    Console.WriteLine(string.Join(" ", packet.Data.ToByteArray().Select(b => b.ToString("X"))));
+    Console.WriteLine(string.Join(" ", packet.Data.ToByteArray()));
 }
 
 using (var output = File.OpenWrite("bar.flv"))
