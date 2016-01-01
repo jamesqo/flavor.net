@@ -8,11 +8,23 @@ Flavor is an intuitive library to parse and manipulate FLV files from .NET.
 
 # Installation
 
-Run this from the Package Manager Console:
+Run this from your NuGet Console:
 
 ```powershell
 Install-Package flavor.net
 ```
+
+# Supported Platforms
+
+Just about every platform is supported, including:
+
+- .NET Framework 4.5
+- Windows 10 Universal apps
+- Mono (Mac/Linux) + Xamarin.iOS/Android
+- .NET Core + ASP.NET 5 and DNX
+- Windows 8.1 and 8.0
+- Windows Phone 8.1 and 8.0
+- Silverlight 5
 
 # Getting Started
 
