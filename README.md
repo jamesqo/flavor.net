@@ -39,6 +39,15 @@ using (var output = File.OpenWrite("bar.flv"))
 
 # Building the Repo
 
+Flavor uses the excellent [Cake](http://cakebuild.net/) automation system for builds. To get a fresh copy of Flavor, clone the repo and run
+
+```powershell
+./build.ps1 # Windows
+./build.sh # Mac/Linux
+```
+
+The assemblies should be in `artifacts/bin/flavor.net` after the build finishes.
+
 # License
 
 Flavor is licensed under the [BSD simplified license](license.bsd).
