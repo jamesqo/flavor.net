@@ -19,10 +19,10 @@ Install-Package flavor.net
 Just about every platform is supported, including:
 
 - .NET Framework 4.5
-- Windows 10 Universal apps
-- Mono (Mac/Linux) + Xamarin.iOS/Android
-- .NET Core + ASP.NET 5 and DNX
-- Windows 8.1 and 8.0
+- Windows 10, 8.1, and 8.0 apps
+- Mono (Mac/Linux) and Xamarin
+- .NET Core
+- ASP.NET 5 and DNX
 - Windows Phone 8.1 and 8.0
 - Silverlight 5
 
