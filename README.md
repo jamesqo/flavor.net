@@ -49,7 +49,7 @@ using (var output = File.OpenWrite("bar.flv"))
 
 # Building the Repo
 
-Flavor uses the excellent [Cake](http://cakebuild.net/) automation system for builds. To get a fresh copy of Flavor, clone the repo and run
+Flavor uses the excellent [Cake](http://cakebuild.net/) DSL for builds. To get a fresh copy of Flavor, clone the repo and run
 
 ```powershell
 ./build.ps1 # Windows
