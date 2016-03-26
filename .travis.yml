@@ -4,7 +4,7 @@ install:
   - source ~/.dnx/dnvm/dnvm.sh
   - dnvm upgrade
 script:
-  - bash build.sh
+  - ./build.sh
 mono:
   - nightly
 notifications:
