@@ -6,7 +6,7 @@ namespace Flavor
     [Flags]
     public enum HeaderFlags : byte
     {
-        Video = 0x01,
+        Video = 0x05,
         Audio = 0x04
     }
 }
